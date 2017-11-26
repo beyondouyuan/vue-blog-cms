@@ -2,7 +2,7 @@
  * @Author: beyondouyuan
  * @Date:   2017-11-25 00:35:04
  * @Last Modified by:   beyondouyuan
- * @Last Modified time: 2017-11-26 14:42:54
+ * @Last Modified time: 2017-11-26 16:12:57
  */
 
 import Vue                          from 'vue'
@@ -22,7 +22,6 @@ const store = new Vuex.Store({
         articles: [],
         article: {},
         user: { name: '', pwd: '' },
-        links: [],
         fetch: {
             promise: null,
             info: '',

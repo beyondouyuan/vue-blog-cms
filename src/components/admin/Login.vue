@@ -30,10 +30,11 @@
   </section>
 </template>
 <script>
-  import {mapActions} from 'vuex'
 
-  import StarCanvas        from '../common/StarCanvas.vue'
-  import {set}  from '../../assets/js/cookieUtil'
+  import { mapActions }     from 'vuex'
+
+  import StarCanvas         from '../common/StarCanvas.vue'
+  import {set}              from '../../assets/js/cookieUtil'
 
   export default{
     data(){

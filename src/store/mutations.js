@@ -2,15 +2,11 @@
 * @Author: beyondouyuan
 * @Date:   2017-11-25 00:33:43
 * @Last Modified by:   beyondouyuan
-* @Last Modified time: 2017-11-26 12:28:24
+* @Last Modified time: 2017-11-26 16:13:45
 */
 export default {
   EDITOR_ARTICLES: (state, articles) => {
     state.articles = articles
-  },
-
-  EDITOR_LINKS: (state, links) => {
-    state.links = links
   },
 
   EDITOR_ARTICLE: (state, article) => {
@@ -35,24 +31,6 @@ export default {
 
   UPDATE_TITLE: (state, title) => {
     state.article.title = title
-  },
-
-  UPDATE_LINK_NAME: (state, { name, index }) => {
-    const href = state.links[index].href
-    state.links.splice(index, 1, { name, href })
-  },
-
-  UPDATE_LINK_HREF: (state, { href, index }) => {
-    const name = state.links[index].name
-    state.links.splice(index, 1, { name, href })
-  },
-
-  ADD_NEW_LINK: (state, index) => {
-    state.links.splice(index, 0, { name: '', href: '' })
-  },
-
-  REMOVE_LINK: (state, index) => {
-    state.links.splice(index, 1)
   },
 
   EDITOR_FETCHING: (state, payload) => {

@@ -16,9 +16,10 @@
   </main>
 </template>
 <script>
-  import {mapState}   from 'vuex'
-  import marked       from '../../assets/js/marked.min'
-  import hljs         from '../../assets/js/highlight.pack'
+
+  import { mapState }     from 'vuex'
+  import marked           from '../../assets/js/marked.min'
+  import hljs             from '../../assets/js/highlight.pack'
 
   export default{
     created(){

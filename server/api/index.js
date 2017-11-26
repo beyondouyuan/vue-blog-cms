@@ -2,7 +2,7 @@
  * @Author: beyondouyuan
  * @Date:   2017-11-24 13:20:13
  * @Last Modified by:   beyondouyuan
- * @Last Modified time: 2017-11-26 14:20:40
+ * @Last Modified time: 2017-11-26 16:06:34
  */
 
 
@@ -52,29 +52,12 @@ router.post('/api/saveArticle', (req, res) => {
     res.status(200).end()
 })
 
+
 router.post('/api/deleteArticle', (req, res) => {
     db.Article.findByIdAndRemove(req.body.id, fn)
     res.status(200).end()
 })
 
-router.post('/api/getLinks', (req, res) => {
-    db.Link.find(null, (err, links) => {
-        if (err) {
-            console.log(err)
-        } else if (links) {
-            res.send(links)
-        }
-    })
-})
-
-router.post('/api/saveLinks', (req, res) => {
-    const links = req.body || []
-    db.Link.remove(null, fn)
-    const promises = links.map(({ name, href }) => new db.Link({ name, href }).save())
-    Promise.all(promises)
-        .then(() => res.status(200).end())
-        .catch(() => res.status(500).end())
-})
 
 router.post('/api/updatePassword', (req, res) => {
     const { name, pwd } = req.body

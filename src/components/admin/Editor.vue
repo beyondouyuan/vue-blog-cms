@@ -24,9 +24,9 @@
   </section>
 </template>
 <script>
-  import {mapActions, mapMutations} from 'vuex'
-  import marked     from '../../assets/js/marked.min'
-  import hljs       from '../../assets/js/highlight.pack'
+  import { mapActions, mapMutations }   from 'vuex'
+  import marked                         from '../../assets/js/marked.min'
+  import hljs                           from '../../assets/js/highlight.pack'
 
   export default{
     data(){

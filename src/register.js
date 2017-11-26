@@ -2,7 +2,7 @@
 * @Author: beyondouyuan
 * @Date:   2017-11-24 13:49:05
 * @Last Modified by:   beyondouyuan
-* @Last Modified time: 2017-11-26 12:35:39
+* @Last Modified time: 2017-11-26 16:14:32
 */
 
 import Vue                from 'vue'
@@ -31,14 +31,14 @@ new Vue({
         })
         .catch(() => this.info = '创建失败')
     },
-    clearInfo () {
+    clear () {
       this.info = ''
     }
   },
   watch: {
-    name: 'clearInfo',
-    pwd: 'clearInfo',
-    pwdConfirm: 'clearInfo'
+    name: 'clear',
+    pwd: 'clear',
+    pwdConfirm: 'clear'
   },
   components: {StarCanvas},
 }).$mount('#register')

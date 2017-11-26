@@ -5,8 +5,9 @@
     </section>
 </template>
 <script>
-    import Submenu    from './Aside.vue'
-    import OverView    from './OverView.vue'
+    import Submenu              from './Aside.vue'
+    import OverView             from './OverView.vue'
+
     export default {
         name: 'Home',
         components: {Submenu, OverView}

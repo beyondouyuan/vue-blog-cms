@@ -2,7 +2,7 @@
  * @Author: beyondouyuan
  * @Date:   2017-11-25 00:34:08
  * @Last Modified by:   beyondouyuan
- * @Last Modified time: 2017-11-26 14:42:43
+ * @Last Modified time: 2017-11-26 16:12:46
  */
 import Vue from 'vue'
 
@@ -41,6 +41,7 @@ export default {
                 commit('EDITOR_ARTICLES', articles)
             })
     },
+
     getArticle: ({ commit }, id) => {
         const start = startLoading(commit)
         return Vue.http.get('/api/getArticle', { params: { id } })
@@ -49,12 +50,14 @@ export default {
                 commit('EDITOR_ARTICLE', response.data)
             })
     },
+
     saveArticle: ({ state, commit }) => {
         return doFetching(state, commit, { info: '确定要保存吗?', btn: 2 })
             .then(() => Vue.http.post('/api/saveArticle', state.article))
             .finally(() => commit('IS_FETCHING', false))
             .catch(() => {})
     },
+
     deleteArticle: ({ state, commit, dispatch }, id) => {
         return doFetching(state, commit, { info: '确定要删除吗?', btn: 2 })
             .then(() => Vue.http.post('/api/deleteArticle', { id }))
@@ -62,26 +65,14 @@ export default {
             .then(() => dispatch('getArticles'))
             .catch(() => {})
     },
-    getLinks: ({ commit }) => {
-        return Vue.http.post('/api/getLinks')
-            .then(response => {
-                commit('EDITOR_LINKS', response.data)
-            })
-    },
-    saveLinks: ({ state, commit }) => {
-        return Vue.http.post('/api/saveLinks', state.links)
-            .then(
-                () => doFetching(state, commit, { info: '保存成功', btn: 1 }),
-                () => doFetching(state, commit, { info: '保存失败', btn: 1 })
-            )
-            .finally(() => commit('IS_FETCHING', false))
-    },
+
     updatePassword: ({ state, commit }, pwd) => {
         return doFetching(state, commit, { info: '更新成功?', btn: 1 })
             .then(() => Vue.http.post('/api/updatePassword', { name: state.user.name, pwd }))
             .finally(() => commit('IS_FETCHING', false))
             .catch(() => {})
     },
+
     login: ({ commit }, payload) => {
         return Vue.http.post('/api/login', payload)
             .then(response => {
@@ -92,6 +83,7 @@ export default {
                 }
             })
     },
+
     logout: ({ state, commit }, payload) => {
         return Vue.http.post('/api/logout', payload)
             .then(response => {

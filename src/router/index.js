@@ -7,7 +7,6 @@ import Archive                      from '../components/website/Archive.vue'
 
 
 import Home                         from '../components/admin/Home.vue'
-import Links                        from '../components/admin/Links.vue'
 import Login                        from '../components/admin/Login.vue'
 import Editor                       from '../components/admin/Editor.vue'
 import Account                      from '../components/admin/Account.vue'
@@ -46,7 +45,6 @@ export default new Router({
                 { path: '', component: Articles },
                 { path: 'articles', name: 'articles', component: Articles },
                 { path: 'editor', name: 'editor', component: Editor },
-                { path: 'links', name: 'links', component: Links },
                 { path: 'account', name: 'account', component: Account }
             ]
         }

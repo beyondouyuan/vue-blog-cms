@@ -6,6 +6,7 @@
 </template>
 <script>
     import Message    from './Message.vue'
+
     export default {
         name: 'OverView',
         components: {Message}
