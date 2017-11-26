@@ -21,7 +21,7 @@
     <div id="APP" style="height: 100%">
         <Particle></Particle>
         <Loading v-show="isLoading"></Loading>
-        <Fetch v-show="isFetching"></Fetch>
+        <my-dialog v-show="isFetching"></my-dialog>
         <router-view></router-view>
     </div>
     <script src="/dist/main.js"></script>

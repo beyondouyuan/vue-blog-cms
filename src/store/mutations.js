@@ -2,7 +2,7 @@
 * @Author: beyondouyuan
 * @Date:   2017-11-25 00:33:43
 * @Last Modified by:   beyondouyuan
-* @Last Modified time: 2017-11-26 16:13:45
+* @Last Modified time: 2017-11-26 16:47:03
 */
 export default {
   EDITOR_ARTICLES: (state, articles) => {
@@ -35,7 +35,7 @@ export default {
 
   EDITOR_FETCHING: (state, payload) => {
     state.fetch.info = payload.info
-    state.fetch.btnNum = payload.btnNum
+    state.fetch.btn = payload.btn
     state.fetch.promise = new Promise((resolve, reject) => {
       state.fetch.fetchResolve = resolve
       state.fetch.fetchReject = reject
