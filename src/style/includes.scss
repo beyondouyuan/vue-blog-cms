@@ -1,0 +1,87 @@
+/*
+* @Author: beyondouyuan
+* @Date:   2017-11-24 02:47:12
+* @Last Modified by:   beyondouyuan
+* @Last Modified time: 2017-11-26 14:48:33
+*/
+
+@import "constant";
+
+@mixin setRight() {
+    position: absolute;
+    left: 200px;
+    top: 50px;
+    bottom: 0;
+    width: calc(100% - 200px);
+    overflow-y: auto;
+}
+
+@mixin setShadow() {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+@mixin setCenter() {
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+@mixin setMiddle() {
+    right: 50%;
+    transform: translate(0, -50%);
+}
+
+@mixin centerMiddle() {
+    @include setCenter();
+    @include setMiddle();
+}
+
+@mixin setTitle() {
+    width: 400px;
+    text-align: center;
+    font-size: 30px;
+    height: 50px;
+    padding-top: 40px;
+    margin: 0 auto;
+}
+
+@mixin defaultButton($color) {
+    border: 1px solid $color;
+    color: $color;
+    background-color: #FFF;
+    transition: all 0.6s;
+    border-radius: 4px;
+    &:hover {
+        background-color: $color;
+        color: #FFF;
+    }
+}
+
+@mixin successButton() {
+    @include defaultButton($lightGreen)
+}
+
+@mixin orangeButton() {
+    @include defaultButton($orange)
+}
+
+
+@mixin featuresButton($color) {
+    border: none;
+    color: $lightGreen;
+    background-color: transparent;
+    transition: all 0.6s;
+    border-radius: 4px;
+    &:hover {
+        background-color: $color;
+        color: $grassGreen;
+    }
+}
+
+@mixin infoButton() {
+    @include featuresButton(rgba(0, 0, 0, 0.2))
+}

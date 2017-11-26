@@ -1,0 +1,35 @@
+/*
+* @Author: beyondouyuan
+* @Date:   2017-11-24 04:33:05
+* @Last Modified by:   beyondouyuan
+* @Last Modified time: 2017-11-24 04:33:43
+*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  font-family: $fontGothic;
+  color: $lightBlack;
+}
+
+a {
+  text-decoration: none
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+button, input, textarea {
+  border: none;
+  outline: none;
+  font-family: $fontGothic;
+  background-color: transparent;
+}
+
+button {
+  cursor: pointer;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Vue博客管理系统</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=11;IE=9; IE=8; IE=7; IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link  type="image/x-icon" rel="shortcut icon" href="/dist/favicon.ico" />
+    <link rel="stylesheet" href="dist/index.css">
+    <link rel="stylesheet" href="dist/styles.css">
+</head>
+
+<body>
+    <div id="APP" style="height: 100%">
+        <Particle></Particle>
+        <Loading v-show="isLoading"></Loading>
+        <Fetch v-show="isFetching"></Fetch>
+        <router-view></router-view>
+    </div>
+    <script src="/dist/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>注册</title>
+  <link rel="stylesheet" href="dist/index.css">
+  <style>
+    .form {
+      width: 500px;
+      height: 400px;
+      margin: 0 auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .icon i {
+      transition: all 4s;
+      color: #3aa373;
+    }
+    .text {
+      color: #3aa373;
+    }
+    .icon i:hover {
+      transform: rotate(1440deg);
+    }
+
+    .info {
+      margin: 10px;
+      font-size: 12px;
+      height: 20px;
+      color: #e96900;
+    }
+
+    .input:hover {
+      color: #3aa373;
+    }
+
+    p {
+      color: #7f8c8d;
+      height: 50px;
+      text-align: center;
+      transition: all 0.4s;
+    }
+
+    p input {
+      transition: all 0.4s;
+      width: 200px;
+      padding: 8px;
+      color: #42b983;
+      border-bottom: 1px solid #42b983;
+    }
+
+    p input:focus {
+      width: 210px;
+    }
+    p input::placeholder {
+      color: #e96900;
+    }
+    button {
+      transition: all 0.4s;
+      color: #3aa373;
+      border: 1px solid #3aa373;
+      border-radius: 4px;
+      width: 80px;
+      height: 30px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #3aa373;
+      color: #FFF;
+    }
+  </style>
+</head>
+<body>
+<div id="register">
+  <star-canvas></star-canvas>
+  <div class="form">
+    <p class="icon">
+      <i class="fa fa-transgender fa-2x"></i>
+    </p>
+    <p class="text">
+      注册账号
+    </p>
+    <p class="input">
+      <i class="fa fa-user fa-fw"></i>
+      <input type="text"
+             placeholder="输入用户名"
+             v-model.trim="name">
+    </p>
+    <p class="input">
+      <i class="fa fa-key fa-fw"></i>
+      <input type="password"
+             placeholder="输入密码"
+             v-model.trim="pwd">
+    </p>
+    <p class="input">
+      <i class="fa fa-key fa-fw"></i>
+      <input type="password"
+             placeholder="确认输入"
+             v-model.trim="pwdConfirm">
+    </p>
+    <p class="info">{{info}}</p>
+    <p>
+      <button @click="submit()">提交</button>
+    </p>
+    <p>
+      已有账号？<a href="/login">立刻登陆</a>
+    </p>
+  </div>
+</div>
+<script src="/dist/register.js"></script>
+</body>
+</html>
